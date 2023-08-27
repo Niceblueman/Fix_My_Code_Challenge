@@ -1,6 +1,6 @@
 #include <string.h>
 #include <stdlib.h>
-#include "main.h"
+#include "lists.h"
 
 /**
  * free_dlistint - Free a list

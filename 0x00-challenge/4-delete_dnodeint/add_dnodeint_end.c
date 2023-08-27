@@ -1,16 +1,16 @@
 #include <string.h>
 #include <stdlib.h>
-#include "main.h"
+#include "lists.h"
 
 /**
  * add_dnodeint_end - Add a node at the end of a list
  *
- * @the_he: The address of the pointer to the first element of the list
- * @num: The number to store in the new element
+ * @head: The address of the pointer to the first element of the list
+ * @n: The number to store in the new element
  *
  * Return: A pointer to the new element
  */
-dlistint_t *add_dnodeint_end(dlistint_t **the_he, const int num)
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
 	dlistint_t *new;
 	dlistint_t *l;
@@ -20,15 +20,15 @@ dlistint_t *add_dnodeint_end(dlistint_t **the_he, const int num)
 	{
 		return (NULL);
 	}
-	new->num = num;
+	new->n = n;
 	new->next = NULL;
-	if (*the_he == NULL)
+	if (*head == NULL)
 	{
-		*the_he = new;
+		*head = new;
 		new->prev = NULL;
 		return (new);
 	}
-	l = *the_he;
+	l = *head;
 	while (l->next != NULL)
 	{
 		l = l->next;
